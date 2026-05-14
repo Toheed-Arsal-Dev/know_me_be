@@ -98,6 +98,16 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": (
+        "base.renderers.CustomJSONRenderer",
+        "rest_framework.renderers.BrowsableAPIRenderer",
+    ),
+    "EXCEPTION_HANDLER": "base.exceptions.custom_exception_handler",
+    "DEFAULT_AUTHENTICATION_CLASSES": [],
+    "DEFAULT_THROTTLE_CLASSES": [],
+}
+
 
 LANGUAGE_CODE = 'en-us'
 
